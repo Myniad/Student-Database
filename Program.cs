@@ -12,17 +12,17 @@ while (runProgram)
     string[] foods = { "Baja Blast", "Hot Wings", "french fries", "Pad Ke Mao", "Stir fry", "Anpan", "Egg roll", "Pizza", "Naleśniki", "Fried Rice", "Pasta", "Quesadilla", "noodles", "Chewing Tobacco", "Coney Dogs", "Pizza" };
 
 
-    Console.Write("Welcome! Which student would you like to learn more about? Enter a number 1-9: ");
+    Console.Write($"Welcome! Which student would you like to learn more about? Enter a number 1-{names.Length}: ");
 
     int studentNum = int.Parse(Console.ReadLine());
     int machineNum = studentNum - 1;
 
 
-    while (studentNum < 1 || studentNum > 9)
+    while (studentNum < 1 || studentNum > names.Length)
     {
-        Console.WriteLine("Please enter a number 1-9");
+        Console.WriteLine($"Please enter a number 1-{names.Length}");
         studentNum = int.Parse(Console.ReadLine());
-        machineNum = studentNum;
+        machineNum = studentNum - 1;
     }
 
     string townOrFood = "";
