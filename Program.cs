@@ -22,6 +22,7 @@ while (runProgram)
     {
         Console.WriteLine("Please enter a number 1-9");
         studentNum = int.Parse(Console.ReadLine());
+        machineNum = studentNum;
     }
 
     string townOrFood = "";
@@ -46,12 +47,7 @@ while (runProgram)
         Console.WriteLine($"{names[machineNum]} likes {foods[machineNum]}");
        
     }
-     
-
-
-
-
-
+  
     while (true)
     {
         Console.WriteLine("Would you like to learn about another student? y/n");
